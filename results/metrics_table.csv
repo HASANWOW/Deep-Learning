@@ -1,0 +1,7 @@
+model,latent_dim,train_time_per_epoch_s,latency_ms_batch64,test_mse,test_psnr_db,test_ssim,fid_score,training_stability
+Vanilla Autoencoder,64,5.1,0.248,0.0065,23.0,0.873,N/A (Latent Voids),Stabil / Konvergen
+Sparse Autoencoder,"64 (Sparse L1, zero=42.1%)",5.21,0.295,0.00866,21.65,0.8355,N/A (Latent Voids),Stabil / Konvergen
+Variational Autoencoder (VAE),64,5.3,0.182,0.01318,19.65,0.7792,98.94,Stabil / Konvergen
+Vanilla GAN (MLP),100 (Prior Noise),5.63,0.273,N/A (Tanpa Encoder),N/A,N/A,152.05,Rentan Osilasi / Mode Collapse
+Deep Convolutional GAN (DCGAN),100 (Prior Noise),24.89,9.675,N/A (Tanpa Encoder),N/A,N/A,32.34,Cukup Stabil (Sensitif Arsitektur)
+DDPM (Diffusion),28x28 (T=400),28.63,5430.885,N/A (Denoising Model),N/A,N/A,25.9,Sangat Stabil

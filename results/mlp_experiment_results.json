@@ -1,0 +1,43 @@
+{
+  "test_accuracy": 0.8951428571428571,
+  "dead_relu_fraction_in_z_mlp": 0.48438170552253723,
+  "weight_orthogonality_errors": {
+    "W1": {
+      "shape": [
+        256,
+        784
+      ],
+      "frob_err_WTW_minus_I": 295.6393127441406,
+      "frob_err_WWT_minus_I": 294.7449951171875
+    },
+    "W2": {
+      "shape": [
+        64,
+        256
+      ],
+      "frob_err_WTW_minus_I": 52.1977424621582,
+      "frob_err_WWT_minus_I": 50.324989318847656
+    },
+    "W3": {
+      "shape": [
+        10,
+        64
+      ],
+      "frob_err_WTW_minus_I": 9.240561485290527,
+      "frob_err_WWT_minus_I": 5.602497100830078
+    }
+  },
+  "frozen_latent_decoder_metrics": {
+    "test_mse": 0.016489911962832723,
+    "test_psnr_db": 18.574550999232702,
+    "test_ssim": 0.7313863228389195
+  },
+  "vanilla_ae_baseline_metrics": {
+    "test_mse": 0.006497827558112996,
+    "test_psnr_db": 23.003045305524555,
+    "test_ssim": 0.8729865597997393
+  },
+  "z_mlp_mean_norm": 18.839487075805664,
+  "z_mlp_std_mean": 1.9353983402252197,
+  "elapsed_seconds": 275.1611563849997
+}

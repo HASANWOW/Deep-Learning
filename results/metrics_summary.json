@@ -1,0 +1,75 @@
+{
+  "device": "cuda",
+  "dataset": "FashionMNIST",
+  "seed": 42,
+  "batch_size": 128,
+  "fid_num_samples": 2000,
+  "models_comparison": [
+    {
+      "model": "Vanilla Autoencoder",
+      "latent_dim": "64",
+      "train_time_per_epoch_s": 5.1,
+      "latency_ms_batch64": 0.248,
+      "test_mse": 0.0065,
+      "test_psnr_db": 23.0,
+      "test_ssim": 0.873,
+      "fid_score": "N/A (Latent Voids)",
+      "training_stability": "Stabil / Konvergen"
+    },
+    {
+      "model": "Sparse Autoencoder",
+      "latent_dim": "64 (Sparse L1, zero=42.1%)",
+      "train_time_per_epoch_s": 5.21,
+      "latency_ms_batch64": 0.295,
+      "test_mse": 0.00866,
+      "test_psnr_db": 21.65,
+      "test_ssim": 0.8355,
+      "fid_score": "N/A (Latent Voids)",
+      "training_stability": "Stabil / Konvergen"
+    },
+    {
+      "model": "Variational Autoencoder (VAE)",
+      "latent_dim": "64",
+      "train_time_per_epoch_s": 5.3,
+      "latency_ms_batch64": 0.182,
+      "test_mse": 0.01318,
+      "test_psnr_db": 19.65,
+      "test_ssim": 0.7792,
+      "fid_score": 98.94,
+      "training_stability": "Stabil / Konvergen"
+    },
+    {
+      "model": "Vanilla GAN (MLP)",
+      "latent_dim": "100 (Prior Noise)",
+      "train_time_per_epoch_s": 5.63,
+      "latency_ms_batch64": 0.273,
+      "test_mse": "N/A (Tanpa Encoder)",
+      "test_psnr_db": "N/A",
+      "test_ssim": "N/A",
+      "fid_score": 152.05,
+      "training_stability": "Rentan Osilasi / Mode Collapse"
+    },
+    {
+      "model": "Deep Convolutional GAN (DCGAN)",
+      "latent_dim": "100 (Prior Noise)",
+      "train_time_per_epoch_s": 24.89,
+      "latency_ms_batch64": 9.675,
+      "test_mse": "N/A (Tanpa Encoder)",
+      "test_psnr_db": "N/A",
+      "test_ssim": "N/A",
+      "fid_score": 32.34,
+      "training_stability": "Cukup Stabil (Sensitif Arsitektur)"
+    },
+    {
+      "model": "DDPM (Diffusion)",
+      "latent_dim": "28x28 (T=400)",
+      "train_time_per_epoch_s": 28.63,
+      "latency_ms_batch64": 5430.885,
+      "test_mse": "N/A (Denoising Model)",
+      "test_psnr_db": "N/A",
+      "test_ssim": "N/A",
+      "fid_score": 25.9,
+      "training_stability": "Sangat Stabil"
+    }
+  ]
+}
